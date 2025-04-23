@@ -51,7 +51,7 @@ def main():
     
     for exercise in exercises:
         print(f"\nTraining model for {exercise}...")
-        csv_file = f'{exercise}_coordinates.csv'
+        csv_file = f'Data_and_models/CSV/{exercise}_coordinates.csv'
         
         # Load and preprocess data
         X, y = load_and_preprocess_data(csv_file)
@@ -63,7 +63,7 @@ def main():
         evaluate_model(clf, X_test, y_test)
         
         # Save the model
-        save_model(clf, f'{exercise}_model.joblib')
+        save_model(clf, f'Data_and_models/{exercise}_model.joblib')
 
 if __name__ == "__main__":
     main()
